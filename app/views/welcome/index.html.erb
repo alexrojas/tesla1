@@ -1,2 +1,43 @@
-<h1>**Welcome Tesla APP **</h1>
-<p>Find me in app/views/welcome/index.html.erb</p>
+<% if current_user %>
+  <h3>Welcome: <%= current_user.email %></h3>
+<% else %>
+  <div class="jumbotron">
+    <h2>Welcome to the Tesla App!</h2>
+    <p class="lead">
+      You'll love driving a new electric Car. Sign up!
+    </p>
+  </div>
+
+  <div class="row">
+    <div class="plans clearfix">
+      <div class="col-lg-3 col-lg-offset-3 plan">
+        <h2>Seller Plan</h2>
+
+        <div class="features">
+          <ul>
+            <li>List your car</li>
+            <li>Estimate delivery Time</li>
+            <li>Wait for Offers!</li>
+          </ul>
+        </div>
+        <p>
+          <%= link_to 'Sign Up', new_user_registration_path, class: 'btn btn-primary sign-up' %>
+        </p>
+      </div>
+      <div class="col-lg-3 plan">
+        <h2>Buyer Plan</h2>
+
+        <div class="features">
+          <ul>
+            <li>Browse Vehicles</li>
+            <li>Make Offers</li>
+            <li>Get your new Tesla Model 3</li>
+          </ul>
+        </div>
+        <p>
+          <%= link_to 'Sign Up', new_user_registration_path, class: 'btn btn-primary sign-up' %>
+        </p>
+      </div>
+    </div>
+  </div>
+<% end %>
