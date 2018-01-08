@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  resnum: MyString
+  deliverydate: 2018-01-08
+  price: 1
+  comment: MyText
+  user_id: 1
+
+two:
+  resnum: MyString
+  deliverydate: 2018-01-08
+  price: 1
+  comment: MyText
+  user_id: 1
